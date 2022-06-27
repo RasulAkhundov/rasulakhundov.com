@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+.about-section {
+   padding: 90px 0 20px 0;
+   overflow: hidden;
+
+   .about-img {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      .image {
+         position: relative;
+         z-indeX: 0;
+         width: 100%;
+         min-height: 475px;
+         height: 100%;
+         background: url('../../assets/my-image.jpeg');
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+      }
+      &::after {
+         content: "";
+         position: absolute;
+         bottom: 16px;
+         left: 32px;
+         width: 60%;
+         height: 5px;
+         background: #ff3d4f;
+         z-index: 0;
+     }
+      &::before {
+         content: "";
+         position: absolute;
+         bottom: -35px;
+         left: 20px;
+         background-image: url('/assets/about-shape.svg');
+         background-repeat: no-repeat;
+         width: 300px;
+         height: 300px;
+         z-index: -1;
+     }
+   }
+   .about-content {
+      h2 {
+         font-size: 28px;
+         font-weight: 800;
+         font-family: 'Saira', sans-serif;
+         color: #fff;
+         line-height: 1.8;
+         text-transform: capitalize;
+         letter-spacing: 0.3px;
+         margin-bottom: 15px;
+     }
+     p {
+         color: #9da1a5;
+         font-size: 16px;
+         font-family: 'Nunito' , sans-serif;
+         font-weight: 400;
+         line-height: 1.9;
+         letter-spacing: 0.5px;
+         margin-bottom: 35px;
+     }
+     button {
+         padding: 12px 24px;
+         background: transparent;
+         border: 2px solid #fff;
+         color: white;
+         font-size: 12px;
+         font-family: 'Saira', sans-serif;
+         letter-spacing: 1px;
+         font-weight: 600;
+         outline: none;
+         margin-right: 15px;
+         transition: 0.5s ease-in;
+         cursor: crosshair !important;
+         &:hover {  
+            box-shadow: inset 0 0 0 70px #fff;
+            color: #101010;
+        }
+     }
+   }
+   .about-info-section {
+      padding: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      ul {
+         text-decoration: none;
+         padding: 0;
+         margin: 0;
+
+         li {
+             list-style: none;
+             display: flex;
+             margin-bottom: 30px;
+
+             a {
+                 width: 50%;
+                 text-decoration: none;
+                 color: #9da1a5;
+                 font-size: 16px;
+                 font-family: 'Nunito', sans-serif;
+                 font-weight: 400;
+                 letter-spacing: 0.3px;
+             }
+
+             span {
+                 min-width: 30% !important;
+                 font-size: 16px;
+                 color: White;
+                 font-weight: 400;
+                 font-family: 'Saira', sans-serif;
+                 line-height: 1.4;
+                 letter-spacing: 0.3px;
+             }
+         }
+         li:last-child {
+             margin-bottom: 0;
+         }
+     }
+   }
+}

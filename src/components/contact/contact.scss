@@ -1,0 +1,110 @@
+.contact-section {
+   padding: 90px 0 20px 0;
+   overflow: hidden;
+
+   .single-info {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 35px 20px 30px;
+      background: #1A1A1A;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 300ms ease;
+      box-shadow: 0px 9px 31px 6px rgba(0, 0, 0, 0.2) !important;
+
+      i {
+         width: 80px;
+         height: 80px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         border-radius: 50%;
+         background: #222222;
+         font-size: 36px;
+         color: #9da1a5;
+         margin-bottom: 15px;
+      }
+
+      h3 {
+         color: #fff;
+         font-size: 22px;
+         font-weight: 700;
+         font-family: 'Nunito', sans-serif;
+         text-transform: capitalize;
+         line-height: 1.9;
+         letter-spacing: 0.5px;
+      }
+
+      span {
+         color: #9da1a5;
+         font-size: 14px;
+         font-weight: 600;
+         font-family: 'Nunito', sans-serif;
+         line-height: 1.4;
+         letter-spacing: 0.3px;
+      }
+   }
+
+   .single-info:hover {
+      border: 1px solid #ff3d4f;
+   }
+
+   .contact-form {
+      padding: 35px 30px 30px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #1a1a1a;
+
+      .input-cover {
+         width: 100%;
+
+         input,
+         textarea {
+            width: 100%;
+            padding: 12px 0;
+            background: transparent;
+            border: 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 16px;
+            color: #9da1a5;
+            padding: 15px 10px;
+            outline: none;
+         }
+
+         button {
+            width: 100%;
+            padding: 15px 24px;
+            background: transparent;
+            border: 2px solid #fff;
+            color: white;
+            font-size: 12px;
+            font-family: 'Saira', sans-serif;
+            letter-spacing: 1px;
+            font-weight: 600;
+            outline: none;
+            margin-right: 15px;
+            transition: 0.5s ease-in;
+            cursor: crosshair !important;
+         }
+
+         button:hover {
+            box-shadow: inset 0 0 0 70px #fff;
+            color: #101010;
+         }
+      }
+   }
+
+   .mapouter {
+      position: relative;
+      text-align: right;
+      height: 100%;
+      width: 100%;
+   }
+
+   .gmap_canvas {
+      overflow: hidden;
+      background: none !important;
+      height: 100%;
+      width: 100%;
+   }
+}

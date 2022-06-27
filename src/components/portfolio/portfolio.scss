@@ -1,0 +1,102 @@
+.portfolio-section {
+   padding: 90px 0 20px 0;
+
+   .portfolios {
+      margin-inline: auto;
+
+      .single-portfolio-item {
+         width: 100%;
+
+         .screen {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            user-select: none;
+            position: relative;
+
+            img {
+               position: absolute;
+               bottom: -100%;
+               width: 100%;
+               height: auto;
+               user-select: none;
+               user-zoom: none;
+            }
+            .image-1 {
+               top: 0;
+               left: 0;
+               transition: all 2s linear;
+               &:hover {
+                  top: -50%;
+               }
+            }
+            .image-2 {
+               top: 0;
+               left: 0;
+               transition: all 2s linear;
+               &:hover {
+                  top: -50%;
+               }
+            }
+            .image-3 {
+               top: 0;
+               left: 0;
+               transition: all 2s linear;
+               &:hover {
+                  top: -50%;
+               }
+            }
+            .image-4 {
+               top: 0;
+               left: 0;
+               transition: all 2s linear;
+               &:hover {
+                  top: -50%;
+               }
+            }
+            .image-5 {
+               top: 0;
+               left: 0;
+               transition: all 2s linear;
+               &:hover {
+                  top: -50%;
+               }
+            }
+            .image-6 {
+               top: 0;
+               left: 0;
+               transition: all 2s linear;
+               &:hover {
+                  top: -50%;
+               }
+            }
+         }
+         button {
+            margin-top: 10px;
+            width: 100%;
+            padding: 12px 0;
+            background: transparent;
+            border: 2px solid #ebebeb;
+            font-size: 18px;
+            font-family: 'Saira', sans-serif;
+            font-weight: 600;
+            color: #ebebeb;
+            outline: none;
+            letter-spacing: 1px;
+            cursor: crosshair !important;
+            transition: all 500ms ease;
+            user-select: none;
+
+            &:hover {
+               color: #101010;
+               box-shadow: inset 0 0 0 70px #fff;
+            }
+         }
+      }
+
+      .swiper {
+         width: 100vw;
+         z-index: 0;
+      }
+   }
+}

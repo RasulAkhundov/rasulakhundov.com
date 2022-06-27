@@ -1,0 +1,177 @@
+.nav-bar {
+   width: 100%;
+   height: 70px;
+   display: flex;
+   align-items: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 1;
+   transition: all 300ms ease;
+
+   .menu-container {
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 70px);
+      background: url('../../assets/menu-bg.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      z-index: -1;
+      overflow-y: auto;
+      .route-section {
+         ul {
+            padding: 0;
+            margin: 0;
+            li {
+               list-style: none;
+               a {
+                  display: flex;
+                  align-items: center;
+                  text-decoration: none;
+                  color: #9da1a5;
+                  font-size: 35px;
+                  font-weight: 500;
+                  font-family: 'Nunito', sans-serif;
+                  line-height: 1.9;
+                  p {
+                     font-size: 16px;
+                     font-weight: 700;
+                     color: #7D7D7E;
+                     margin: 0 15px 0 0;
+                  }
+               }
+            }
+         }
+      }
+      .contact-area {
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         align-items: flex-end;
+         .contact-block {
+            text-align: end;
+            line-height: 1.9;
+            h3 {
+               font-size: 20px;
+               color: #ebebeb;
+               font-family: 'Saira', sans-serif;
+               margin: 20px 0;
+            }
+            p {
+               font-size: 16px;
+               color: #9da1a5;
+            }
+         }
+      }
+   }
+
+   .navbar-content {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .logo {
+         img {
+            width: 30px;
+         }
+      }
+
+      .menu-burger {
+         cursor: pointer;
+         position: relative;
+         opacity: 0.8;
+
+         label {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            cursor: pointer;
+            margin: 0;
+
+            input[type="checkbox"] {
+               display: none;
+            }
+
+            .line {
+               height: 3px;
+               background: #ebebeb;
+               margin-bottom: 5px;
+               transition: .3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+            }
+
+            .line-1 {
+               width: 15px;
+            }
+
+            .line-2 {
+               width: 25px;
+            }
+
+            .line-3 {
+               width: 20px;
+               margin: 0;
+            }
+
+            input[type="checkbox"]:checked~.line:nth-of-type(1) {
+               transform-origin: bottom;
+               transform: rotateZ(-45deg) translate(-3.5px, 2.5px);
+            }
+
+            input[type="checkbox"]:checked~.line:nth-of-type(2) {
+               transform-origin: bottom;
+               transform: rotateZ(45deg);
+            }
+
+            input[type="checkbox"]:checked~.line:nth-of-type(3) {
+               transform-origin: bottom;
+               transform: rotateZ(-45deg) translate(2px, -7px);
+            }
+
+            .menu-toggle-button {
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+           }
+         }
+      }
+   }
+}
+.menu-open-animation {
+   animation: menuOpenAnimation 400ms ease forwards;
+}
+.menu-close-animation {
+   animation: menuCloseAnimation 400ms ease forwards;
+}
+@keyframes menuOpenAnimation {
+   from {
+      top: -100%;
+   }
+   to {
+      top: 70px;
+   }
+}
+@keyframes menuCloseAnimation {
+   from {
+      top: 70px;
+   }
+   to {
+      top: -100%;
+   }
+}
+@media screen and (max-width: 768px) {
+   // .nav-bar .menu-container {
+   //    align-items: flex-start;
+   //    padding-block: 30px;
+   // }
+   .nav-bar .menu-container .contact-area {
+      display: none;
+   }
+}
