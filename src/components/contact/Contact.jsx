@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './contact.scss';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+
+   const form = useRef();
+
+   const sendEmail = (e) => {
+      e.preventDefault();
+
+      emailjs.sendForm('service_bmg3xcg', 'template_cafi8ws', form.current, 'QqFYz2DQlwlL9odd5')
+         .then((result) => {
+            console.log(result.text);
+         }, (error) => {
+            console.log(error.text);
+         });
+      e.target.reset();
+   }
+
    return (
       <div className="contact-section">
          <div className="container">
@@ -34,33 +50,35 @@ const Contact = () => {
                </div>
                <div className="col-12 col-lg-6 mt-5">
                   <div className="contact-form">
-                     <div className="row">
-                        <div className="col-12 col-sm-6 mb-3">
-                           <div className="input-cover contact-form-name">
-                              <input type="text" id="form-name" placeholder="Name"/>
+                     <form ref={form} onSubmit={sendEmail}>
+                        <div className="row">
+                           <div className="col-12 col-sm-6 mb-3">
+                              <div className="input-cover contact-form-name">
+                                 <input type="text" id="form-name" placeholder="Name" name='name' required />
+                              </div>
+                           </div>
+                           <div className="col-12 col-sm-6 mb-3">
+                              <div className="input-cover contact-form-email">
+                                 <input type="email" id="form-email" placeholder="Email" name='email' required />
+                              </div>
+                           </div>
+                           <div className="col-12 mb-3">
+                              <div className="input-cover contact-form-subject">
+                                 <input type="text" id="form-subject" placeholder="Subject" name='subject' required />
+                              </div>
+                           </div>
+                           <div className="col-12 mb-4">
+                              <div className="input-cover contact-form-message">
+                                 <textarea name="message" id="form-message" placeholder="Message" required style={{ maxHeight: '80px' }}></textarea>
+                              </div>
+                           </div>
+                           <div className="col-12">
+                              <div className="input-cover contact-form-button">
+                                 <button type="submit" id="send-message">SEND MESSAGE</button>
+                              </div>
                            </div>
                         </div>
-                        <div className="col-12 col-sm-6 mb-3">
-                           <div className="input-cover contact-form-email">
-                              <input type="email" id="form-email" placeholder="Email"/>
-                           </div>
-                        </div>
-                        <div className="col-12 mb-3">
-                           <div className="input-cover contact-form-subject">
-                              <input type="text" id="form-subject" placeholder="Subject"/>
-                           </div>
-                        </div>
-                        <div className="col-12 mb-4">
-                           <div className="input-cover contact-form-message">
-                              <textarea name="message" id="form-message" placeholder="Message" style={{ maxHeight: '80px'}}></textarea>
-                           </div>
-                        </div>
-                        <div className="col-12">
-                           <div className="input-cover contact-form-button">
-                              <button type="button" id="send-message">SEND MESSAGE</button>
-                           </div>
-                        </div>
-                     </div>
+                     </form>
                   </div>
                </div>
                <div className="col-12 col-lg-6 mt-5">
