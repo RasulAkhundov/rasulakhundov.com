@@ -20,11 +20,9 @@ function App() {
 
   //Page Open Function
   const pageOpen = () => {
-    console.log("wef")
     $('#page-opening-button').addClass('loading-button-animation');
 
     setTimeout(function () {
-      console.log("Wefwef")
       $("#loading-wrapper").addClass('loading-page-animation');
     }, 1500);
 
@@ -55,7 +53,7 @@ function App() {
             <Route path='/about' element={<About />} />
             <Route path='/services' element={<Services />} />
             <Route path='/skills' element={<Skills />} />
-            <Route path='/portfolio' element={<Portfolio />} />
+            <Route path='/projects' element={<Portfolio />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='*'
               element={<Navigate to="/" replace />}

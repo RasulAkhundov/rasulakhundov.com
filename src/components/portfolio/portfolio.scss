@@ -2,77 +2,23 @@
    padding: 90px 0 20px 0;
 
    .portfolios {
-      margin-inline: auto;
+      width: 100%;
 
       .single-portfolio-item {
          width: 100%;
+         box-shadow: 0px 9px 31px 6px rgb(0 0 0 / 20%) !important;
 
          .screen {
             width: 100%;
-            height: 400px;
             overflow: hidden;
             user-select: none;
             position: relative;
 
             img {
-               position: absolute;
-               bottom: -100%;
                width: 100%;
-               height: auto;
-               user-select: none;
-               user-zoom: none;
-            }
-            .image-1 {
-               top: 0;
-               left: 0;
-               transition: all 2s linear;
-               &:hover {
-                  top: -50%;
-               }
-            }
-            .image-2 {
-               top: 0;
-               left: 0;
-               transition: all 2s linear;
-               &:hover {
-                  top: -50%;
-               }
-            }
-            .image-3 {
-               top: 0;
-               left: 0;
-               transition: all 2s linear;
-               &:hover {
-                  top: -50%;
-               }
-            }
-            .image-4 {
-               top: 0;
-               left: 0;
-               transition: all 2s linear;
-               &:hover {
-                  top: -50%;
-               }
-            }
-            .image-5 {
-               top: 0;
-               left: 0;
-               transition: all 2s linear;
-               &:hover {
-                  top: -50%;
-               }
-            }
-            .image-6 {
-               top: 0;
-               left: 0;
-               transition: all 2s linear;
-               &:hover {
-                  top: -50%;
-               }
             }
          }
          button {
-            margin-top: 10px;
             width: 100%;
             padding: 12px 0;
             background: transparent;
@@ -92,11 +38,6 @@
                box-shadow: inset 0 0 0 70px #fff;
             }
          }
-      }
-
-      .swiper {
-         width: 100vw;
-         z-index: 0;
       }
    }
 }
