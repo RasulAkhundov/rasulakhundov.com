@@ -24,7 +24,7 @@ const Portfolio = () => {
                      </div>
                      <div className="col-12 col-md-6 col-lg-4 mb-5">
                         <div className="single-portfolio-item">
-                        <h3 className='text-white m-0 py-2 text-center'>Tecvio</h3>
+                        <h3 className='text-white m-0 py-2 text-center'>Techvio</h3>
                            <div className="screen">
                               <img className='image-2' src={require('../../assets/port-image-2.png')} alt="" />
                            </div>
