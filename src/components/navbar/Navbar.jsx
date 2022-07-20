@@ -26,7 +26,7 @@ const Navbar = () => {
    $(window).scroll(() => {
       let scrollY = window.scrollY;
 
-      if(scrollY > 0) {
+      if (scrollY > 0) {
          $('.nav-bar').css('background', '#1d1e20');
       } else {
          $('.nav-bar').css('background', 'transparent');
@@ -41,41 +41,29 @@ const Navbar = () => {
                   <div className="col-12 col-md-6 mb-3 d-flex justify-content-center justify-content-md-start mb-md-0">
                      <div className="route-section">
                         <ul>
-                           <li>
-                              <a href="/">
-                                 <p>01</p>
-                                 Home
-                              </a>
+                           <li onClick={() => {navigate('/'); menuOpen()}}>
+                              <p>01</p>
+                              Home
                            </li>
-                           <li>
-                              <a href="/about">
-                                 <p>02</p>
-                                 About
-                              </a>
+                           <li onClick={() => {navigate('/about'); menuOpen()}}>
+                              <p>02</p>
+                              About
                            </li>
-                           <li>
-                              <a href="/services">
-                                 <p>03</p>
-                                 Services
-                              </a>
+                           <li onClick={() => {navigate('/services'); menuOpen()}}>
+                              <p>03</p>
+                              Services
                            </li>
-                           <li>
-                              <a href="/skills">
-                                 <p>04</p>
-                                 Technical Skills
-                              </a>
+                           <li onClick={() => {navigate('/skills'); menuOpen()}}>
+                              <p>04</p>
+                              Technical Skills
                            </li>
-                           <li>
-                              <a href="/projects">
-                                 <p>05</p>
-                                 Projects
-                              </a>
+                           <li onClick={() => {navigate('/projects'); menuOpen()}}>
+                              <p>05</p>
+                              Projects
                            </li>
-                           <li>
-                              <a href="/contact">
-                                 <p>06</p>
-                                 Contact
-                              </a>
+                           <li onClick={() => {navigate('/contact'); menuOpen()}}>
+                              <p>06</p>
+                              Contact
                            </li>
                         </ul>
                      </div>
@@ -101,8 +89,8 @@ const Navbar = () => {
          </div>
          <div className="container">
             <div className="navbar-content">
-               <div className="logo" style={{cursor: 'pointer'}}>
-                  <a onClick={() => scroll.scrollToTop()}><img src={require('../../assets/logo.png')} alt="" /></a>
+               <div className="logo" style={{ cursor: 'pointer' }}>
+                  <a onClick={() => { navigate('/'); scroll.scrollToTop() }}><img src={require('../../assets/logo.png')} alt="" /></a>
                </div>
                <div className="menu-burger">
                   <label htmlFor="check">
