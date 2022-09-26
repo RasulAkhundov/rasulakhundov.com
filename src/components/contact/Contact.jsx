@@ -38,14 +38,14 @@ const Contact = () => {
                   <div className="single-info my-phone" style={{ background: '#222222' }}>
                      <i className="fa-solid fa-phone"></i>
                      <h3>Phone Number:</h3>
-                     <span>+9945550744998</span>
+                     <span>+994555074498</span>
                   </div>
                </div>
                <div className="col-12 col-sm-6 col-lg-4 mt-4 mt-lg-0 single-info-cover">
                   <div className="single-info email-address">
                      <i className="fa-solid fa-envelope"></i>
                      <h3>Email Address:</h3>
-                     <span>resul.axundov2002@mail.ru</span>
+                     <span>rasul.dev@mail.ru</span>
                   </div>
                </div>
                <div className="col-12 col-lg-6 mt-5">
